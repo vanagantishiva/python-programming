@@ -1,0 +1,21 @@
+difficulty = [2, 4, 6, 8, 10]
+profit = [10, 20, 30, 40, 50]
+worker = [4, 5, 6, 7]
+
+jobs = []
+for i in range(len(difficulty)):
+    jobs.append((difficulty[i], profit[i]))
+jobs.sort()
+worker.sort()
+max_profit = 0
+total_profit = 0
+i = 0
+n = len(jobs)
+for w in worker:
+    while i < n and w >= jobs[i][0]:
+        if jobs[i][1] > max_profit:
+            max_profit = jobs[i][1]
+        i += 1
+    total_profit += max_profit
+
+print(total_profit)
