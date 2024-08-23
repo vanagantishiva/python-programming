@@ -1,0 +1,14 @@
+nums = [14, 16, 87, 36, 25, 89, 34]
+M = 1
+N = 3
+sorted_nums = sorted(nums)
+mth_max = sorted_nums[-M]
+nth_min = sorted_nums[N-1]
+total_sum = mth_max + nth_min
+difference = mth_max - nth_min
+product = mth_max * nth_min
+print(f"{M}th Maximum Number = {mth_max}")
+print(f"{N}th Minimum Number = {nth_min}")
+print(f"Sum = {total_sum}")
+print(f"Difference = {difference}")
+print(f"Product = {product}")
